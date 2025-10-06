@@ -1,7 +1,8 @@
 .main-content{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .header-content{
@@ -10,7 +11,7 @@
   flex-wrap: wrap;
 }
 
-mat-icon {
+.mat_icon {
   color: black;
   font-size: 20px;
   margin-left: 15px;
@@ -86,9 +87,140 @@ mat-icon {
 
   }
 
+  .span-bold{
+    font-family: system-ui, Arial , Roboto, "Helvetica Neue", sans-serif !important;
+    font-weight: 600;
+  }
+
   .custom-chip{
     font-family: system-ui, Arial , Roboto, "Helvetica Neue", sans-serif !important;
-    border-color: dimgrey;
+    border-color: lightgray;
     font-size: small;
-    color: dimgrey;
   }
+
+
+  .cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .business-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding : 2rem;
+    margin:40px;
+    height: 300px;
+    width: 400px;
+  }
+
+  .card-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-content{
+    display: flex !important;
+    flex-direction: column;
+    min-width: 100px;
+    margin:0;
+    padding:0;
+    gap: 5px;
+  }
+
+.cmn-btn{
+  align-items: center;
+
+}
+
+.users-card-icon{
+  display: block;
+  height: auto;
+  color: orangered;
+}
+
+.users-btn-card{
+  background-color: rgb(250, 207, 186);
+}
+
+/*
+dollar-sign
+target
+star
+alert-triangle
+trending-up
+trending-down
+ */
+
+.dollar-sign-card-icon{
+  display: block;
+  height: auto;
+  color: #22614a;
+}
+
+.dollar-sign-btn-card{
+  background-color: #a7c5b5;
+}
+
+.target-card-icon{
+  display: block;
+  height: auto;
+  color: darkslategray;
+}
+
+.target-btn-card{
+  background-color: #e2efe0;
+}
+
+.star-card-icon{
+  display: block;
+  height: auto;
+  color: orange;
+}
+
+.star-btn-card{
+  background-color: rgb(248,232,197);
+}
+
+.alert-triangle-card-icon{
+  display: block;
+  height: auto;
+  color: darkorange;
+}
+
+.alert-triangle-btn-card{
+  background-color: rgb(250,236,205);
+}
+
+.right-icon{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.trend-style{
+  font-size: 18px;
+  height: auto;
+}
+
+.medium-text{
+  font-family: system-ui, Arial , Roboto, "Helvetica Neue", sans-serif !important;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.large-text{
+  font-family: system-ui, Arial , Roboto, "Helvetica Neue", sans-serif !important;
+  font-size: large;
+  font-weight: bold;
+}
+.small-text{
+  font-family: system-ui, Arial , Roboto, "Helvetica Neue", sans-serif !important;
+  font-size: 10px;
+}

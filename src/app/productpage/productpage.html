@@ -8,21 +8,50 @@
     </div>
     <div class="left-panel">
       <div class="icon-name">
-        <p> <mat-icon>grid_view</mat-icon> <span>Overview</span></p>
-        <p> <mat-icon >list</mat-icon> Sections</p>
+        <p> <mat-icon class="mat_icon">grid_view</mat-icon> <span class="span-bold">Overview</span></p>
+        <p> <mat-icon class="mat_icon">list</mat-icon> <span class="span-bold">Sections</span></p>
       </div>
     </div>
   </mat-toolbar>
 </div>
-  <div class="business-overview">
+  <span class="business-overview">
     <div class="business-title">
       <h1>Business Overview <mat-chip class="custom-chip">Section 1 of 4</mat-chip></h1>
-      <mat-chip class="custom-chip">Last Updated Today 9</mat-chip>
+      <mat-chip class="custom-chip">Last Updated: Today 9:30 AM</mat-chip>
     </div>
-    <div>
+  </span>
 
-    </div>
-  </div>
+      <section class="cards">
+        @if(data){
+          @for(card_data of cards_data; track card_data.card_id){
+            <mat-card class="business-card" appearance="outlined">
+              <div class="card-header">
+                <div>
+                  <button matFab class="{{card_data.icon_name}}-btn-card cmn-btn">
+                    <mat-icon svgIcon="{{card_data.icon_name}}" class="{{card_data.icon_name}}-card-icon"></mat-icon>
+                  </button>
+                </div>
+                <div [style.color]="card_data.change_rate > 0 ? 'green' : 'red'" class="right-icon">
+                  <mat-icon svgIcon="{{card_data.change_rate > 0 ? 'trending-up' : 'trending-down'}}" class="trend-style"></mat-icon>
+                  <span style="font-size: small">{{card_data.change_rate | signedNumber}}%</span>
+                </div>
+
+              </div>
+              <mat-card-content class="card-content">
+                <div class="medium-text">
+                  {{card_data.customer_type}}
+                </div>
+                <div class="large-text">
+                  {{card_data.metric_value | currencyWithScale}}
+                </div>
+                <div class="small-text">vs last month</div>
+              </mat-card-content>
+            </mat-card>
+          }
+        }
+      </section>
 
 </div>
+
+
 

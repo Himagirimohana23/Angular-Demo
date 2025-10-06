@@ -1,0 +1,19 @@
+
+<!--<i class="fa-light fa-bullseye icon-image"></i>-->
+<section class="detailed_view">
+  <h3 class="header-content"> Detailed View</h3>
+
+    <mat-accordion>
+        @for(detailed_view of detailedViewList; track detailed_view.panel_title){
+          <mat-expansion-panel class="mat-elevation-z0">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="mat-title">
+                <mat-icon class="icon-image" svgIcon="{{detailed_view.icon_name}}"></mat-icon>
+                {{detailed_view.panel_title}} <span class="{{detailed_view.icon_name}}-badge badge">{{detailed_view.badge_value}}</span>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>{{detailed_view.panel_description}}</p>
+          </mat-expansion-panel>
+        }
+  </mat-accordion>
+</section>
